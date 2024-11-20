@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Calculadora de IMC</h1>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Altura (em metros)</ion-label>
+      <ion-input type="number" [(ngModel)]="altura" name="altura" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Peso (em kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="peso" name="peso" required></ion-input>
+    </ion-item>
+
+    <div class="button-group">
+      <ion-button expand="block" (click)="calcularIMC()">Calcular</ion-button>
+      <ion-button expand="block" color="medium" (click)="limpar()">Limpar</ion-button>
+    </div>
+  </form>
+
+  <div *ngIf="resultadoIMC !== null" class="resultado" [ngStyle]="{ color: corClassificacao }">
+    <p>Seu IMC: <strong>{{ resultadoIMC }}</strong></p>
+    <p >Classificação: <strong>{{ classificacao }}</strong></p>
+  </div>
+</div>

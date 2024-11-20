@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Cálculo de Idade</h1>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Ano de Nascimento</ion-label>
+      <ion-input type="number" [(ngModel)]="anoNascimento" name="anoNascimento" required></ion-input>
+    </ion-item>
+
+    <div class="button-group">
+      <ion-button expand="block" (click)="calcularIdade()">Calcular</ion-button>
+      <ion-button expand="block" color="medium" (click)="limpar()">Limpar</ion-button>
+    </div>
+  </form>
+
+  <div *ngIf="idade !== null" class="resultado">
+    <p>Idade: <strong>{{ idade }}</strong></p>
+    <p>Classificação: <strong>{{ classificacao }}</strong></p>
+  </div>
+</div>

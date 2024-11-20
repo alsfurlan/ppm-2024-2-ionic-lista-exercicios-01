@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>Calculadora Simples</h1>
+
+  <form>
+    <ion-item>
+      <ion-label position="floating">Número 1</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="numero1"
+        name="numero1"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número 2</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="numero2"
+        name="numero2"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Operação</ion-label>
+      <ion-select
+        [(ngModel)]="operacao"
+        name="operacao"
+        placeholder="Selecione"
+      >
+        <ion-select-option value="+">Soma (+)</ion-select-option>
+        <ion-select-option value="-">Subtração (-)</ion-select-option>
+        <ion-select-option value="*">Multiplicação (×)</ion-select-option>
+        <ion-select-option value="/">Divisão (÷)</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="button-group">
+      <ion-button expand="block" (click)="calcular()">Calcular</ion-button>
+      <ion-button expand="block" color="medium" (click)="limpar()"
+        >Limpar</ion-button
+      >
+    </div>
+  </form>
+
+  <div *ngIf="resultado !== null" class="resultado">
+    <p>
+      Resultado: <strong>{{ resultado }}</strong>
+    </p>
+  </div>
+</div>

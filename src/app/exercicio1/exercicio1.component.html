@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Consumo de Combustível</h1>
+  <form (ngSubmit)="calcularConsumo()">
+    <ion-item>
+      <ion-label position="floating">Distância percorrida (Km)</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="distancia"
+        name="distancia"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Litros gastos</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="litros"
+        name="litros"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <div class="button-group">
+      <ion-button expand="block" type="submit">Calcular</ion-button>
+      <ion-button expand="block" color="medium" (click)="limpar()"
+        >Limpar</ion-button
+      >
+    </div>
+  </form>
+
+  <div
+    *ngIf="resultado !== null"
+    class="resultado"
+    [ngStyle]="{ color: corClassificacao }"
+  >
+    <p>
+      Consumo: <strong>{{ resultado }} Km/l</strong>
+    </p>
+    <p>
+      Classificação: <strong>{{ classificacao }}</strong>
+    </p>
+  </div>
+</div>

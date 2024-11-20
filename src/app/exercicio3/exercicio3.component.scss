@@ -1,0 +1,34 @@
+.container {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+  
+      ion-button {
+        flex: 1;
+      }
+    }
+  
+    .resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+  
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+  
