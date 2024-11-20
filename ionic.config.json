@@ -1,0 +1,7 @@
+{
+  "name": "lista-exercicios-01",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
